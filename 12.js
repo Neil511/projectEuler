@@ -36,7 +36,7 @@ function getNumOfDivisors(n) {
 	return counter;
 }
 var n = 1;
-
+console.time("Poop");
 while(getNumOfDivisors(getTriangleNumber(n)) <= 500 ) {
 	n ++;
 }
@@ -44,4 +44,4 @@ while(getNumOfDivisors(getTriangleNumber(n)) <= 500 ) {
 console.log(getTriangleNumber(n));
 
 
-
+console.timeEnd("Poop");
