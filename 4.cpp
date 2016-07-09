@@ -26,7 +26,6 @@ int main(){
     for(int j = 1000; j >= 100; j--){
       if(isPalindrome(i * j) && (i * j > max)){
         max = i * j;
-        cout << i * j << endl;
       }
     }
   }
