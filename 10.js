@@ -13,12 +13,13 @@ function isPrime(n){
 function main(n){
   var sum = 0;
   var curNum = 1;
-  while(curNum < 2000000){
+  while(true){
     curNum++;
     if((isPrime(curNum)) && (curNum < n)){
       sum += curNum;
       continue;
     }
+    if(isPrime(curNum)) break;
   }
   return sum;
 }
