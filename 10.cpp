@@ -3,8 +3,8 @@
 using namespace std;
 
 bool isPrime(long long n) {
-  int root = ceil(sqrt(n));
-  for(int i = 2; i < root; i++) {
+  int root = sqrt(n);
+  for(int i = 2; i <= root; i++) {
     if(n % i == 0) {
       return false;
     }

@@ -13,11 +13,10 @@ function isPrime(n){
 function main(n){
   var sum = 0;
   var curNum = 1;
-  while(num < n){
+  while(curNum < n){
     curNum++;
-    if((isPrime(curNum)){
+    if(isPrime(curNum)){
       sum += curNum;
-      continue;
     }
   }
   return sum;
