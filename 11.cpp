@@ -37,12 +37,12 @@ void printArray(int arr [20][20]){
 
 long long findMaxProduct(int arr [20][20]){
   long long max = 0;
-  for(int i = 1; i < 2; i++){
-    for(int j = 1; j < 2; j++){
+  for(int i = 0; i < 20; i++){
+    for(int j = 0; j < 20; j++){
       long long diagRight = calculate(arr, i, j, i+1, j+1, i+2, j+2, i+3, j+3);
       long long diagLeft = calculate(arr, i, j, i-1, j+1, i-2, j+2, i-3, j+3);
-      long long horizontal = calculate(arr, i, j, i+1, j, i+2, j, i+3, j);
-      long long vertical = calculate(arr, i, j, i, j+1, i, j+2, i, j+3);
+      long long vertical = calculate(arr, i, j, i+1, j, i+2, j, i+3, j);
+      long long horizontal = calculate(arr, i, j, i, j+1, i, j+2, i, j+3);
       max = getMax(diagRight, diagLeft, horizontal, vertical, max);
     }
   }
