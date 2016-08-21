@@ -17,8 +17,8 @@ void printFirstTenOfSum(int sum [100], int arr [100][50]){
     for(int row = 0; row < 100; row++){
       colSum += arr[row][col];
     }
-    sum[col + 50] += colSum % 10;
-    sum[col + 49] += colSum / 10;
+    cout << colSum << endl;
+    sum[col + 50] = colSum;
   }
 
   for(int i = 99; i >= 0; i--){
