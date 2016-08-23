@@ -1,5 +1,4 @@
 #include <iostream>
-#include <sstream>
 using namespace std;
 
 void printArray(int arr [100][50]){
@@ -12,6 +11,7 @@ void printArray(int arr [100][50]){
 }
 
 void printFirstTenOfSum(int sum [100], int arr [100][50]){
+  // take sum of each column
   for(int col = 49; col >= 0; col--){
     int colSum = 0;
     for(int row = 0; row < 100; row++){
@@ -21,6 +21,7 @@ void printFirstTenOfSum(int sum [100], int arr [100][50]){
     sum[col + 50] = colSum;
   }
 
+  // do carryover of anything more than a 9 right to left
   for(int i = 99; i >= 0; i--){
     if(sum[i] > 9 && i != 0){
       sum[i - 1] += sum[i] / 10;
@@ -28,9 +29,11 @@ void printFirstTenOfSum(int sum [100], int arr [100][50]){
     }
   }
 
+  // print the first 10 digits of the sum starting at first non-zero
   int j = 0;
   for(int i = 0; i < 100; i++){
     bool print = false;
+
     if(sum[i] != 0){
       print = true;
     }
